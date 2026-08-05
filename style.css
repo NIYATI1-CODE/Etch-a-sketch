@@ -1,0 +1,20 @@
+.container{
+  width: 560px;
+  height: 560px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background: lightblue;
+}
+
+.square{
+  border: 1px solid black;
+  width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+}
+
+.change{
+  background-color: black;
+}
