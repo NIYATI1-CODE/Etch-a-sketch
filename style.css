@@ -1,3 +1,10 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .container{
   width: 560px;
   height: 560px;
@@ -5,7 +12,6 @@
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  background: lightblue;
 }
 
 .square{
