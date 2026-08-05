@@ -36,3 +36,9 @@ new_grid.addEventListener('click', () => {
   let result = prompt('Enter new number of square per side(less than 100):', '18');
   grid(result);
 })
+
+const reset =document.querySelector('.reset');
+reset.addEventListener('click', ()=>
+{
+  grid(16);
+})

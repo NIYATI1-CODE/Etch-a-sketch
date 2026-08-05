@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .container{
@@ -23,4 +24,14 @@
 
 .change{
   background-color: black;
+}
+
+.new_grid , .reset{
+  font-size: 20px;
+  color: black;
+  background-color: rgb(4, 247, 251);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
 }
