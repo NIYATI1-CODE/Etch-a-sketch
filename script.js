@@ -16,17 +16,44 @@ function grid(no_square) {
     return;
   }
 
+
+  let color;
+  const color_picker = document.querySelector('.color_picker');
+  let random_click = false;
+  const random_color = document.querySelector('.random');
+
+  color_picker.addEventListener('change', () => {
+    color = color_picker.value;
+    random_click = false;
+  })
+
+  random_color.addEventListener('click', () => {
+    random_click = true;
+  });
+
+  function randomcolor() {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    color = `rgb(${red},${green},${blue})`;
+  }
+
   for (let i = 0; i < total; i++) {
     const square = document.createElement('div');
     square.classList.add("square");
-    const size = 560 / no_square ;
+    const size = 560 / no_square;
     square.style.width = `${size}px`;
     square.style.height = `${size}px`;
 
     square.addEventListener('mouseover', () => {
       square.classList.add('change');
+      if (random_click) {
+        randomcolor();
+      }
+      square.style.backgroundColor = color;
     }
     )
+
     container.appendChild(square);
   }
 }
@@ -37,8 +64,10 @@ new_grid.addEventListener('click', () => {
   grid(result);
 })
 
-const reset =document.querySelector('.reset');
-reset.addEventListener('click', ()=>
-{
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', () => {
   grid(16);
 })
+
+
+

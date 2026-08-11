@@ -1,9 +1,15 @@
 .main{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.features{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .container{
@@ -26,7 +32,7 @@
   background-color: black;
 }
 
-.new_grid , .reset{
+.new_grid , .reset , .random{
   font-size: 20px;
   color: black;
   background-color: rgb(4, 247, 251);
