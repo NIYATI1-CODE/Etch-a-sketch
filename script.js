@@ -21,7 +21,7 @@ function grid(no_square) {
   const color_picker = document.querySelector('.color_picker');
   let random_click = false;
   const random_color = document.querySelector('.random');
-  
+
 
   color_picker.addEventListener('change', () => {
     color = color_picker.value;
@@ -38,6 +38,7 @@ function grid(no_square) {
     const blue = Math.floor(Math.random() * 256);
     color = `rgb(${red},${green},${blue})`;
   }
+  let isdrawing = false;
 
   for (let i = 0; i < total; i++) {
     const square = document.createElement('div');
@@ -46,16 +47,29 @@ function grid(no_square) {
     square.style.width = `${size}px`;
     square.style.height = `${size}px`;
     let count = 0;
-    square.addEventListener('mouseover', () => {
-      square.classList.add('change');
-      if (random_click) {
-        randomcolor();
+    
+    square.addEventListener('mousedown', () => {
+      isdrawing = true;
+    }
+    )
+
+    document.addEventListener('mouseup', () => {
+      isdrawing = false;
+    })
+
+    square.addEventListener('mousemove', () => {
+      if (isdrawing) {
+        square.classList.add('change');
+        if (random_click) {
+          randomcolor();
+        }
+        square.style.backgroundColor = color;
+        count++;
+        if (count <= 10) {
+          square.style.opacity = (count * 10) / 100;
+        }
       }
-      square.style.backgroundColor = color;
-      count++;
-      if(count<=10){
-        square.style.opacity = (count * 10)/100 ;
-      }
+
     }
     )
     container.appendChild(square);
