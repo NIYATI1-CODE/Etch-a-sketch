@@ -18,7 +18,7 @@ function grid(no_square) {
 
 
   let color;
-  const color_picker = document.querySelector('.color_picker');
+  const color_picker = document.querySelector('#color_picker');
   let random_click = false;
   const random_color = document.querySelector('.random');
 
