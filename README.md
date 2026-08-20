@@ -39,4 +39,4 @@ A browser-based Etch-a-Sketch drawing application built with HTML, CSS, and Java
 
 ## Screenshot
 
-![Etch-a-Sketch](../Etch-a-sketch/Screenshot/Preview.png)
+![Etch-a-Sketch](./Screenshot/Preview.png)
